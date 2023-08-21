@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "build:client": "yarn workspace client build"
+  }
+}
