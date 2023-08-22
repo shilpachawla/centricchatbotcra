@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "client"
+    "client",
+    "Server/*"
   ],
   "scripts": {
     "build:client": "yarn workspace client build"
