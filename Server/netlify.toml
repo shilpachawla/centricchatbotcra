@@ -1,3 +1,8 @@
 [build]
 command = "npm run build"
 publish = "build"
+
+[build.environment]
+NETLIFY_USE_NPM = "true"
+NPM_VERSION = "9.6.7"
+NODE_VERSION = "18.17.1"
