@@ -6,6 +6,6 @@
   ],
   "scripts": {
     "build:client": "yarn workspace client build",
-    "build:Server": "yarn workspace client Server"
+    "build:Server": "yarn workspace Server build"
   }
 }
