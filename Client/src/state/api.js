@@ -1,7 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://centricchatbotcra.web.app" }),
+  // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
   reducerPath: "main",
   tagTypes: [],
   endpoints: (build) => ({
@@ -35,7 +36,7 @@ export const api = createApi({
     }),
     postLogin: build.mutation({
       query: (payload) => ({
-        url: "auth/login",
+        url: "/auth",
         method: "POST",
         body: payload,
       }),

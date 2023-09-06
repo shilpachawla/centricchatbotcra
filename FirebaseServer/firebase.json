@@ -1,13 +1,11 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "rewrites": [
+      {
+        "source": "/auth",
+        "function": "app"
+      }
     ]
-  },
-  "functions": {
-    "source": "functions"
   }
 }
