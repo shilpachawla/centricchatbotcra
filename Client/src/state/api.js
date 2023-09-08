@@ -8,28 +8,28 @@ export const api = createApi({
   endpoints: (build) => ({
     postAiText: build.mutation({
       query: (payload) => ({
-        url: "openai/text",
+        url: "/text",
         method: "POST",
         body: payload,
       }),
     }),
     postAiCentricSupport: build.mutation({
       query: (payload) => ({
-        url: "openai/centricSupport",
+        url: "/centricSupport",
         method: "POST",
         body: payload,
       }),
     }),
     postAiCode: build.mutation({
       query: (payload) => ({
-        url: "openai/code",
+        url: "/code",
         method: "POST",
         body: payload,
       }),
     }),
     postAiAssist: build.mutation({
       query: (payload) => ({
-        url: "openai/assist",
+        url: "/assist",
         method: "POST",
         body: payload,
       }),

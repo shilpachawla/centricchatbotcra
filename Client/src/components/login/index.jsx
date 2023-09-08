@@ -27,12 +27,15 @@ const Login = ({ setUser, setSecret }) => {
     <div className="login-page">
       <div className="login-img">
         {" "}
-        <img src="./graphics/LoginPage-Violet.png" alt="Image missing.." />
+        <img
+          src="../../../graphics/LoginPage-Violet.png"
+          alt="Image missing.."
+        />
       </div>
       <div className="login-container">
         <h2>
           {" "}
-          <img src="./graphics/Centric Logo.png" alt="Logo missing.." />
+          <img src="../../../graphics/Centric Logo.png" alt="Logo missing.." />
         </h2>
         <h2 className="login-title">AI Chat Bot</h2>
         <p

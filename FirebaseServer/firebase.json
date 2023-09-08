@@ -3,8 +3,10 @@
     "public": "public",
     "rewrites": [
       {
-        "source": "/auth",
+        "source": "/**",
         "function": "app"
+        // "source": "/auth",
+        // "function": "app"
       }
     ]
   }
