@@ -5,6 +5,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const { Configuration, OpenAIApi } = require("openai");
 const { runWithEmbeddings } = require("./langchain_index.js");
+require("dotenv").config();
 const app = express();
 app.use(cors({ origin: true }));
 // app.get("/timestamp", async (req, res) => {
@@ -13,7 +14,7 @@ app.use(cors({ origin: true }));
 // });
 
 //const router = express.Router();
-console.log("hello there");
+// console.log("hello there");
 
 //dotenv.config();
 // let corsOptions = {
@@ -31,9 +32,10 @@ app.use(express.json());
 // app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 // app.use(cors());
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
+
 app.post("/auth", async (req, res) => {
   console.log("req here", req.body);
   try {
@@ -42,7 +44,7 @@ app.post("/auth", async (req, res) => {
       "https://api.chatengine.io/users/me",
       {
         headers: {
-          "Project-ID": "197bb0ea-3db7-4ac6-acd2-8f01ea670681",
+          "Project-ID": process.env.PROJECT_ID,
           "User-Name": username,
           "User-Secret": password,
         },

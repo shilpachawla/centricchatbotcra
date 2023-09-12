@@ -21,7 +21,8 @@
     "helmet": "^7.0.0",
     "nodemon": "^3.0.1",
     "openai": "^3.2.1",
-    "langchain": "^0.0.94"
+    "langchain": "^0.0.94",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.1.0"
