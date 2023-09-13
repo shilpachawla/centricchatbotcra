@@ -32,7 +32,7 @@ app.use(express.json());
 // app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 // app.use(cors());
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -69,9 +69,9 @@ app.post("/centricSupport", async (req, res) => {
       { text: response.text },
       {
         headers: {
-          "Project-ID": "197bb0ea-3db7-4ac6-acd2-8f01ea670681",
-          "User-Name": "AI_bot-Mridul",
-          "User-Secret": "1234",
+          "Project-ID": process.env.PROJECT_ID,
+          "User-Name": process.env.BOT_USER_NAME,
+          "User-Secret": process.env.BOT_USER_SECRET,
         },
       }
     );
@@ -102,9 +102,9 @@ app.post("/text", async (req, res) => {
       { text: response.data.choices[0].text },
       {
         headers: {
-          "Project-ID": "197bb0ea-3db7-4ac6-acd2-8f01ea670681",
-          "User-Name": "AI_bot-Mridul",
-          "User-Secret": "1234",
+          "Project-ID": process.env.PROJECT_ID,
+          "User-Name": process.env.BOT_USER_NAME,
+          "User-Secret": process.env.BOT_USER_SECRET,
         },
       }
     );
